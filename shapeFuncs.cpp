@@ -38,13 +38,14 @@ void initPoint(struct Point *p, double xVal, double yVal) {
 
 string pointToString(Point p, int precision) {
   ostringstream oss;
-  oss << setprecision(precision); // set precision to 3 decimal places
+  oss << setprecision(precision);
   oss << "(" << p.x << "," << p.y << ")";
   return oss.str();
 }
 
 string boxToString(Box b, int precision) {
   ostringstream oss;
+  oss << setprecision(precision);
   oss << "ul="<< pointToString(b.ul,precision)<< ",w=" << b.width<<",h=" << b.height<<endl;
   
   return oss.str(); // TODO: Delete this line and comment and replace with appropriate code
